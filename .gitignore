@@ -1,0 +1,38 @@
+# =========================
+# Secrets / Credentials
+# =========================
+
+.env
+
+**/credentials.json
+**/token.json
+
+config/credentials.json
+config/token.json
+
+# =========================
+# Python
+# =========================
+
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual Environment
+venv/
+.venv/
+env/
+
+# =========================
+# IDE
+# =========================
+
+.vscode/
+.idea/
+
+# =========================
+# OS
+# =========================
+
+.DS_Store
+Thumbs.db
