@@ -1,5 +1,5 @@
 USD/TWD Exchange Rate Analysis & AI Report
-一套以 Python 建置的 USD/TWD 美元兌新台幣匯率自動化分析系統。
+一套以 Python 建置的 USD/TWD（美元兌新台幣）匯率自動化分析系統。
 系統透過排程程式定期擷取台灣銀行美元兌新台幣匯率資料，將資料儲存至資料庫，並使用最近 30 日匯率資料進行統計分析。
 
 接著，系統會將原始匯率資料與統計結果提供給 AI，產生自然語言匯率分析報告，最後透過 Email 自動寄送給指定人員。
@@ -8,12 +8,11 @@ USD/TWD Exchange Rate Analysis & AI Report
 將原本需要人工執行的：
 匯率資料蒐集 → 資料儲存 → 統計分析 → 報告撰寫 → Email 發送
 流程自動化。
-透過排程機制定期執行，讓使用者可以自動收到包含：
+透過排程機制定期執行，讓使用者可以自動收到包含以下內容的 Email：
 
 近期匯率資料
 匯率統計資訊
 AI 匯率分析報告
-的 Email。
 🏗️ 技術架構
 flowchart TB
 
@@ -50,16 +49,24 @@ flowchart TB
     Mailer --> Gmail
 
 🔄 系統流程
-
 開始
+  ↓
 從台灣銀行取得匯率資料
-DatabaseUSD/TWD Data
+  ↓
+Database - USD/TWD Data
+  ↓
 取得最近 30 日資料
+  ↓
 計算統計資訊
+  ↓
 AI Engine
+  ↓
 產生 AI 分析報告
+  ↓
 Email Service
+  ↓
 Recipients
+
 🚀 主要功能
 1. 自動擷取匯率資料
 定期從台灣銀行取得美元兌新台幣匯率資料，並將資料寫入資料庫。
@@ -85,13 +92,13 @@ AI 分析資料來源
 每日匯率變動率
 30 日累積變動率
 例如：
-分析期間：2026/08/01 ～ 2026/08/30
-
-起始匯率：32.10
-最新匯率：31.85
-最高匯率：32.20
-最低匯率：31.70
-累積變動率：-0.78%
+項目	數值
+分析期間	2026/08/01 ～ 2026/08/30
+起始匯率	32.10
+最新匯率	31.85
+最高匯率	32.20
+最低匯率	31.70
+累積變動率	-0.78%
 
 實際數值會依資料庫中的匯率資料動態計算。
 4. AI 匯率分析報告
@@ -180,17 +187,25 @@ CI/CD Scheduled Job
 每日匯率變動率依前一交易日匯率計算：
 每日變動率
 =
-(當日匯率 - 前一交易日匯率)
-÷ 前一交易日匯率
-× 100%
+當日匯率
+−
+前一交易日匯率
+前一交易日匯率
+×
+100
+%
 
 累積變動率
 以分析期間第一筆與最後一筆匯率計算：
 累積變動率
 =
-(最新匯率 - 起始匯率)
-÷ 起始匯率
-× 100%
+最新匯率
+−
+起始匯率
+起始匯率
+×
+100
+%
 
 🤖 AI 分析原則
 AI 分析報告遵循以下原則：
@@ -245,7 +260,6 @@ token.json
 本專案使用 Gmail API 搭配 OAuth 2.0 進行 Email 發送。
 由於 credentials.json 與 token.json 包含 OAuth 相關敏感資訊，這些檔案不會提交至 GitHub。
 
-Setup
 1. 建立 Google Cloud Project
 建立一個 Google Cloud Project。
 2. 啟用 Gmail API
@@ -289,9 +303,12 @@ source venv/bin/activate
 pip install -r requirements.txt
 
 5. 設定環境變數
+Linux / macOS：
 cp .env.example .env
 
-填入：
+Windows 可手動複製 .env.example 並重新命名為 .env。
+接著填入：
+
 Database 設定
 AI API Key
 Email 設定
