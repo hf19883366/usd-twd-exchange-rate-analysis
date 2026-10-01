@@ -137,4 +137,20 @@ Email 內容包含：<br>
 
 ## 📁 專案架構
 
-<ul> <li> <strong>project/</strong> <ul> <li> <strong>src/</strong> <ul> <li>app.py</li> <li>config.py</li> <li>bank_rate.py</li> <li>database.py</li> <li>analysis.py</li> <li>chart.py</li> <li>ai_report.py</li> <li>gmail_sender.py</li> </ul> </li> <li> <strong>sql/</strong> <ul> <li>init.sql</li> </ul> </li> <li> <strong>tests/</strong> <ul> <li>test_bank_rate.py</li> <li>test_analysis.py</li> <li>test_database.py</li> </ul> </li> <li>.env.example</li> <li>.gitignore</li> <li>requirements.txt</li> <li>README.md</li> <li>LICENSE</li> </ul> </li> </ul>
+<ul> <li> <strong>project/</strong> <ul> <li> <strong>src/</strong> <ul> <li>app.py</li> <li>config.py</li> <li>bank_rate.py</li> <li>database.py</li> <li>analysis.py</li> <li>chart.py</li> <li>ai_report.py</li> <li>gmail_sender.py</li> </ul> </li> <li> <strong>sql/</strong> <ul> <li>init.sql</li> </ul> </li> <li> <strong>tests/</strong> <ul> <li>test_bank_rate.py</li> <li>test_analysis.py</li> <li>test_database.py</li> </ul> </li> <li>.env.example</li> <li>.gitignore</li> <li>requirements.txt</li> <li>README.md</li> <li>LICENSE</li> </ul> </li> </ul><br>
+credentials.json、token.json、.env 等敏感檔案應保留在本機，不應提交至 Git repository。<br>
+
+## 🔧 技術流程
+系統主要分為以下幾個階段：
+Data Collection
+從台灣銀行取得 USD/TWD 匯率資料。
+Data Storage
+將取得的資料寫入資料庫。
+Data Analysis
+從資料庫取得最近 30 日資料，計算匯率統計資訊。
+AI Analysis
+將每日匯率資料與統計結果傳送給 AI，產生自然語言分析報告。
+Notification
+將統計資料及 AI 分析結果整理成 Email 並寄送。
+
+
