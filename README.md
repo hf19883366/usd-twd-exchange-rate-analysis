@@ -61,26 +61,15 @@ flowchart TB
 
 ## 🔄 系統流程
 
-🔄 系統流程
-步驟	流程
-1	開始
-↓	↓
-2	從台灣銀行取得匯率資料
-↓	↓
-3	Database - USD/TWD Data
-↓	↓
-4	取得最近 30 日資料
-↓	↓
-5	計算統計資訊
-↓	↓
-6	AI Engine
-↓	↓
-7	產生 AI 分析報告
-↓	↓
-8	Email Service
-↓	↓
-9	Recipients
-
+開始
+從台灣銀行取得匯率資料
+Database - USD/TWD Data
+取得最近 30 日資料
+計算統計資訊
+AI Engine
+產生 AI 分析報告
+Email Service
+Recipients
 流程說明
 取得匯率資料：從台灣銀行取得最新 USD/TWD 匯率資料。
 資料儲存：將匯率資料寫入 Database。
