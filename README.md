@@ -78,6 +78,7 @@ AI Engine<br>
 Email Service<br>
 ↓<br>
 Recipients
+<br>
 流程說明
 取得匯率資料：從台灣銀行取得最新 USD/TWD 匯率資料。<br>
 資料儲存：將匯率資料寫入 Database。<br>
