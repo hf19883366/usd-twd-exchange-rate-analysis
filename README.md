@@ -22,3 +22,38 @@
 - 匯率統計資訊
 - AI 匯率分析報告
 
+## 🏗️ 技術架構
+
+flowchart TB
+
+    subgraph External["External Services"]
+        Bank["台灣銀行"]
+        AI["AI API"]
+        Gmail["Gmail / Email"]
+    end
+
+    subgraph Application["Python Application"]
+        Scheduler["Scheduler"]
+        Collector["Crawler / Data Collector"]
+        Analysis["Analysis Engine"]
+        Reporter["AI Report Generator"]
+        Mailer["Email Sender"]
+    end
+
+    subgraph Storage["Data Storage"]
+        DB[("Database")]
+    end
+
+    Scheduler --> Collector
+    Bank --> Collector
+    Collector --> DB
+
+    DB --> Analysis
+    DB --> Reporter
+    Analysis --> Reporter
+
+    Reporter --> AI
+    AI --> Reporter
+
+    Reporter --> Mailer
+    Mailer --> Gmail
