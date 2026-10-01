@@ -244,5 +244,68 @@ project / credentials.json
 token.json<br>
 credentials.json 與 token.json 均應保留在本機，不要提交至 GitHub。<br>
 
+## 📥 安裝與執行
+1. Clone 專案<br>
+git clone <repository-url>
+cd <project-directory>
 
+2. 建立虛擬環境<br>
+python -m venv venv
 
+3. 啟用虛擬環境<br>
+Windows<br>
+    venv\Scripts\activate<br>
+Linux / macOS<br>
+    source venv/bin/activate<br>
+
+4. 安裝套件<br>
+pip install -r requirements.txt<br>
+
+5. 設定環境變數<br>
+Linux / macOS<br>
+    cp .env.example .env<br>
+Windows 可手動複製 .env.example 並重新命名為 .env。<br>
+
+    接著填入：<br>
+    Database 設定<br>
+    AI API Key<br>
+    Email 設定<br>
+
+6. 執行程式<br>
+python src/app.py<br>
+
+## 🔒 安全性注意事項
+本專案涉及資料庫、AI API 及 Email 帳號資訊，因此請注意：<br>
+不要將 API Key 提交至 GitHub。<br>
+不要將資料庫密碼提交至 GitHub。<br>
+不要將 Gmail 密碼提交至 GitHub。<br>
+.env 應加入 .gitignore。<Br>
+建議使用 .env.example 提供必要的環境變數格式。<br>
+credentials.json 不應提交至 Git repository。<br>
+token.json 不應提交至 Git repository。<br>
+若 API Key 或密碼不慎提交，應立即撤銷並重新產生。<br>
+
+## ⭐ 專案特色
+本專案將以下技術整合在單一自動化流程：<br>
+Web Data Collection<br>
+        +<br>
+     Database<br>
+        +<br>
+   Data Analysis<br>
+        +<br>
+        AI<br>
+        +<br>
+ Email Automation<br>
+        =<br>
+Automated Financial Data Analysis<br>
+透過自動化流程，將原始匯率資料轉換為結構化統計資訊與自然語言分析報告，降低人工整理資料與撰寫報告的工作量。<br>
+
+## ⚠️ Disclaimer
+本專案主要用於金融市場資料擷取、資料分析及 AI 報告產生的技術展示。<br>
+AI 產生的內容僅反映所提供資料的分析結果，不構成投資、交易、財務或其他專業建議。<br>
+
+匯率資料及分析結果可能受到資料來源、資料完整性及 AI 生成內容等因素影響。<br>
+
+## 📄 License
+本專案採用 MIT License。<br>
+請參閱 LICENSE。<br>
