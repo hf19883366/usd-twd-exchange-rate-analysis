@@ -140,20 +140,25 @@ Email 內容包含：<br>
 project/
 │
 ├── src/
-│   ├── app.py
-│   ├── config.py
-│   ├── bank_rate.py
-│   ├── database.py
-│   ├── chart.py
-│   ├── ai_report.py
-│   └── gmail_sender.py
+│ ├── app.py
+│ ├── config.py
+│ ├── bank_rate.py
+│ ├── database.py
+│ ├── analysis.py
+│ ├── chart.py
+│ ├── ai_report.py
+│ └── gmail_sender.py
 │
 ├── sql/
-│   └── init.sql
+│ └── init.sql
+│
+├── tests/
+│ ├── test_bank_rate.py
+│ ├── test_analysis.py
+│ └── test_database.py
 │
 ├── .env.example
 ├── .gitignore
 ├── requirements.txt
 ├── README.md
 └── LICENSE
-
