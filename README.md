@@ -153,4 +153,37 @@ AI Analysis<br>
 Notification<br>
     .將統計資料及 AI 分析結果整理成 Email 並寄送。<br>
 
+## ⏰ 排程執行
+系統可透過排程機制定期執行：<br>
+
+Scheduler<br>
+    ↓<br>
+取得最新匯率<br>
+    ↓<br>
+寫入 Database<br>
+    ↓<br>
+取得最近 30 日資料<br>
+    ↓<br>
+計算統計資訊<br>
+    ↓<br>
+AI 產生分析報告<br>
+    ↓<br>
+Email 發送<br>
+
+實際排程方式可依部署環境使用：<br>
+Windows Task Scheduler<br>
+Linux Cron<br>
+Docker / Container Scheduler<br>
+Cloud Scheduler<br>
+CI/CD Scheduled Job<br>
+
+## 📊 統計計算
+每日匯率變動率<br>
+每日匯率變動率依前一交易日匯率計算：<br>
+    > 每日變動率 ＝ (（當日滙率 - 前一交易日匯率）/ 前一交易日匯率 ) * 100 % <br>
+    
+累積變動率<br>
+以分析期間第一筆與最後一筆匯率計算：<br>
+    >累積變動率 ＝ （（最新匯率 - 起始匯率）/ 起始匯率 ）* 100 % <br>
+
 
