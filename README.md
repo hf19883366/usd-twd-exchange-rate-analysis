@@ -137,28 +137,5 @@ Email 內容包含：<br>
 
 ## 📁 專案架構
 
-project/
-│
-├── src/
-│ ├── app.py
-│ ├── config.py
-│ ├── bank_rate.py
-│ ├── database.py
-│ ├── analysis.py
-│ ├── chart.py
-│ ├── ai_report.py
-│ └── gmail_sender.py
-│
-├── sql/
-│ └── init.sql
-│
-├── tests/
-│ ├── test_bank_rate.py
-│ ├── test_analysis.py
-│ └── test_database.py
-│
-├── .env.example
-├── .gitignore
-├── requirements.txt
-├── README.md
-└── LICENSE
+📁 專案架構
+<ul> <li> <strong>project/</strong> <ul> <li> <strong>src/</strong> <ul> <li>app.py</li> <li>config.py</li> <li>bank_rate.py</li> <li>database.py</li> <li>analysis.py</li> <li>chart.py</li> <li>ai_report.py</li> <li>gmail_sender.py</li> </ul> </li> <li> <strong>sql/</strong> <ul> <li>init.sql</li> </ul> </li> <li> <strong>tests/</strong> <ul> <li>test_bank_rate.py</li> <li>test_analysis.py</li> <li>test_database.py</li> </ul> </li> <li>.env.example</li> <li>.gitignore</li> <li>requirements.txt</li> <li>README.md</li> <li>LICENSE</li> </ul> </li> </ul>
