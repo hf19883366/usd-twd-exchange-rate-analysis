@@ -216,5 +216,33 @@ AI_API_KEY=<br>
 EMAIL_FROM=<br>
 EMAIL_TO=<br>
 
+.env 應加入 .gitignore：<br>
+.env<br>
+credentials.json<br>
+token.json<br>
+
+## 📧 Gmail OAuth Setup
+本專案使用 Gmail API 搭配 OAuth 2.0 進行 Email 發送。<br>
+由於 credentials.json 與 token.json 包含 OAuth 相關敏感資訊，這些檔案不會提交至 GitHub。<br>
+
+1. 建立 Google Cloud Project<br>
+建立一個 Google Cloud Project。<br>
+2. 啟用 Gmail API<br>
+在 Google Cloud Console 啟用 Gmail API。<br>
+3. 建立 OAuth 2.0 Client ID<br>
+建立 OAuth 2.0 Client ID，並依照應用程式需求設定。<br>
+4. 下載 OAuth Client Credentials<br>
+下載 OAuth client credentials，並將檔案重新命名為：<br>
+    credentials.json<br>
+5. 放置 credentials.json<br>
+將 credentials.json 放在程式指定的目錄。<br>
+project / credentials.json
+6. 第一次執行程式<br>
+第一次執行程式時，完成 Google OAuth 授權。<br>
+7. 產生 token.json<br>
+授權完成後，程式會產生：<br>
+token.json<br>
+credentials.json 與 token.json 均應保留在本機，不要提交至 GitHub。<br>
+
 
 
