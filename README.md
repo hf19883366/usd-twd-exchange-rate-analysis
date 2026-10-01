@@ -186,4 +186,35 @@ CI/CD Scheduled Job<br>
 以分析期間第一筆與最後一筆匯率計算：<br>
     >累積變動率 ＝ （（最新匯率 - 起始匯率）/ 起始匯率 ）* 100 % <br>
 
+## 🤖 AI 分析原則
+AI 分析報告遵循以下原則：<br>
+    .僅根據系統提供的資料進行分析。<br>
+    .不捏造不存在的市場資料。<br>
+    .明確區分「資料觀察」與「可能的解讀」。<br>
+    .當資料不足以支持某項結論時，明確說明限制。<br>
+    .不提供投資買賣建議。<br>
+    .分析結果僅作為資料整理與市場資訊參考。<br>
+
+## 🛠️ 環境需求
+建議環境：<br>
+    .Python 3.x<br>
+    .Database<br>
+    .AI API<br>
+    .Gmail API + OAuth 2.0<br>
+
+## 🔐 環境變數
+敏感資訊不應直接寫入程式碼或提交至 GitHub。<br>
+建議使用 .env：<br>
+DATABASE_HOST=<br>
+DATABASE_PORT=<br>
+DATABASE_NAME=<br>
+DATABASE_USER=<br>
+DATABASE_PASSWORD=<br>
+
+AI_API_KEY=<br>
+
+EMAIL_FROM=<br>
+EMAIL_TO=<br>
+
+
 
