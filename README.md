@@ -143,14 +143,14 @@ credentials.json、token.json、.env 等敏感檔案應保留在本機，不應�
 ## 🔧 技術流程
 系統主要分為以下幾個階段：<br>
 Data Collection<br>
-    從台灣銀行取得 USD/TWD 匯率資料。<br>
+    .從台灣銀行取得 USD/TWD 匯率資料。<br>
 Data <br>
-    將取得的資料寫入資料庫。<br>
+    .將取得的資料寫入資料庫。<br>
 Data Analysis<br>
-    從資料庫取得最近 30 日資料，計算匯率統計資訊。<br>
+    .從資料庫取得最近 30 日資料，計算匯率統計資訊。<br>
 AI Analysis<br>
-    將每日匯率資料與統計結果傳送給 AI，產生自然語言分析報告。<br>
+    .將每日匯率資料與統計結果傳送給 AI，產生自然語言分析報告。<br>
 Notification<br>
-    將統計資料及 AI 分析結果整理成 Email 並寄送。<br>
+    .將統計資料及 AI 分析結果整理成 Email 並寄送。<br>
 
 
