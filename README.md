@@ -135,4 +135,25 @@ Email 內容包含：<br>
     .匯率統計資訊<br>
     .AI 匯率分析報告<br>
 
+## 📁 專案架構
+
+project/
+│
+├── src/
+│   ├── app.py
+│   ├── config.py
+│   ├── bank_rate.py
+│   ├── database.py
+│   ├── chart.py
+│   ├── ai_report.py
+│   └── gmail_sender.py
+│
+├── sql/
+│   └── init.sql
+│
+├── .env.example
+├── .gitignore
+├── requirements.txt
+├── README.md
+└── LICENSE
 
